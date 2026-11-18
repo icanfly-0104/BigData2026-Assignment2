@@ -1,0 +1,108 @@
+digraph reg {
+  node [style=filled, fontsize=9];
+  "Users_778" [label="User
+22996444", fillcolor="#4C78A8"];
+  "Users_1025" [label="User
+28983449", fillcolor="#4C78A8"];
+  "Pushes_1596610" [label="Pushe
+1596610", fillcolor="#EECA3B"];
+  "Repositories_1354" [label="Repo 1354", fillcolor="#F58518"];
+  "Pushes_1597563" [label="Pushe
+1597563", fillcolor="#EECA3B"];
+  "Repositories_2219" [label="Repo 2219", fillcolor="#F58518"];
+  "IssueComments_101307" [label="IssueComment
+101307", fillcolor="#E45756"];
+  "Issues_162536" [label="Issue
+162536", fillcolor="#B279A2"];
+  "IssueComments_102364" [label="IssueComment
+102364", fillcolor="#E45756"];
+  "Issues_161294" [label="Issue
+161294", fillcolor="#B279A2"];
+  "Repositories_1290" [label="Repo 1290", fillcolor="#F58518"];
+  "PRReviews_86765" [label="PRReview
+86765", fillcolor="#72B7B2"];
+  "PullRequests_286647" [label="PullRequest
+286647", fillcolor="#54A24B"];
+  "PRReviews_86776" [label="PRReview
+86776", fillcolor="#72B7B2"];
+  "PRReviews_87020" [label="PRReview
+87020", fillcolor="#72B7B2"];
+  "PullRequests_287757" [label="PullRequest
+287757", fillcolor="#54A24B"];
+  "PRReviews_87062" [label="PRReview
+87062", fillcolor="#72B7B2"];
+  "PullRequests_287357" [label="PullRequest
+287357", fillcolor="#54A24B"];
+  "PRReviews_87184" [label="PRReview
+87184", fillcolor="#72B7B2"];
+  "PRReviewComments_62930" [label="PRReviewComment
+62930", fillcolor="#9D755D"];
+  "PRReviewComments_62954" [label="PRReviewComment
+62954", fillcolor="#9D755D"];
+  "PullRequests_286746" [label="PullRequest
+286746", fillcolor="#54A24B"];
+  "Repositories_23732" [label="Repo 23732", fillcolor="#F58518"];
+  "PRReviewComments_62955" [label="PRReviewComment
+62955", fillcolor="#9D755D"];
+  "PRReviewComments_63406" [label="PRReviewComment
+63406", fillcolor="#9D755D"];
+  "PRReviewComments_63410" [label="PRReviewComment
+63410", fillcolor="#9D755D"];
+  "PullRequests_289009" [label="PullRequest
+289009", fillcolor="#54A24B"];
+  "Issues_162993" [label="Issue
+162993", fillcolor="#B279A2"];
+  "Pushes_1596610" -> "Users_1025" [label="user_id", fontsize=7];
+  "Pushes_1596610" -> "Repositories_1354" [label="repo_id", fontsize=7];
+  "Pushes_1597563" -> "Users_778" [label="user_id", fontsize=7];
+  "Pushes_1597563" -> "Repositories_2219" [label="repo_id", fontsize=7];
+  "IssueComments_101307" -> "Issues_162536" [label="issue_id", fontsize=7];
+  "IssueComments_101307" -> "Repositories_1354" [label="repo_id", fontsize=7];
+  "IssueComments_101307" -> "Users_1025" [label="author_id", fontsize=7];
+  "Issues_162536" -> "Repositories_1354" [label="repo_id", fontsize=7];
+  "IssueComments_102364" -> "Issues_161294" [label="issue_id", fontsize=7];
+  "IssueComments_102364" -> "Repositories_1290" [label="repo_id", fontsize=7];
+  "IssueComments_102364" -> "Users_778" [label="author_id", fontsize=7];
+  "Issues_161294" -> "Repositories_1290" [label="repo_id", fontsize=7];
+  "PRReviews_86765" -> "PullRequests_286647" [label="pr_id", fontsize=7];
+  "PRReviews_86765" -> "Repositories_2219" [label="repo_id", fontsize=7];
+  "PRReviews_86765" -> "Users_778" [label="reviewer_id", fontsize=7];
+  "PullRequests_286647" -> "Repositories_2219" [label="repo_id", fontsize=7];
+  "PRReviews_86776" -> "PullRequests_286647" [label="pr_id", fontsize=7];
+  "PRReviews_86776" -> "Repositories_2219" [label="repo_id", fontsize=7];
+  "PRReviews_86776" -> "Users_778" [label="reviewer_id", fontsize=7];
+  "PRReviews_87020" -> "PullRequests_287757" [label="pr_id", fontsize=7];
+  "PRReviews_87020" -> "Repositories_2219" [label="repo_id", fontsize=7];
+  "PRReviews_87020" -> "Users_778" [label="reviewer_id", fontsize=7];
+  "PullRequests_287757" -> "Repositories_2219" [label="repo_id", fontsize=7];
+  "PRReviews_87062" -> "PullRequests_287357" [label="pr_id", fontsize=7];
+  "PRReviews_87062" -> "Repositories_2219" [label="repo_id", fontsize=7];
+  "PRReviews_87062" -> "Users_778" [label="reviewer_id", fontsize=7];
+  "PullRequests_287357" -> "Repositories_2219" [label="repo_id", fontsize=7];
+  "PullRequests_287357" -> "Users_778" [label="author_id", fontsize=7];
+  "PRReviews_87184" -> "PullRequests_287357" [label="pr_id", fontsize=7];
+  "PRReviews_87184" -> "Repositories_2219" [label="repo_id", fontsize=7];
+  "PRReviews_87184" -> "Users_1025" [label="reviewer_id", fontsize=7];
+  "PRReviewComments_62930" -> "PullRequests_286647" [label="pr_id", fontsize=7];
+  "PRReviewComments_62930" -> "Repositories_2219" [label="repo_id", fontsize=7];
+  "PRReviewComments_62930" -> "Users_778" [label="author_id", fontsize=7];
+  "PRReviewComments_62954" -> "PullRequests_286746" [label="pr_id", fontsize=7];
+  "PRReviewComments_62954" -> "Repositories_23732" [label="repo_id", fontsize=7];
+  "PRReviewComments_62954" -> "Users_778" [label="author_id", fontsize=7];
+  "PullRequests_286746" -> "Repositories_23732" [label="repo_id", fontsize=7];
+  "PRReviewComments_62955" -> "PullRequests_286746" [label="pr_id", fontsize=7];
+  "PRReviewComments_62955" -> "Repositories_23732" [label="repo_id", fontsize=7];
+  "PRReviewComments_62955" -> "Users_778" [label="author_id", fontsize=7];
+  "PRReviewComments_63406" -> "PullRequests_287357" [label="pr_id", fontsize=7];
+  "PRReviewComments_63406" -> "Repositories_2219" [label="repo_id", fontsize=7];
+  "PRReviewComments_63406" -> "Users_1025" [label="author_id", fontsize=7];
+  "PRReviewComments_63410" -> "PullRequests_287357" [label="pr_id", fontsize=7];
+  "PRReviewComments_63410" -> "Repositories_2219" [label="repo_id", fontsize=7];
+  "PRReviewComments_63410" -> "Users_778" [label="author_id", fontsize=7];
+  "PRReviewComments_63410" -> "PRReviews_87062" [label="pull_request_review_id", fontsize=7];
+  "PRReviewComments_63410" -> "PRReviewComments_63406" [label="in_reply_to_id", fontsize=7];
+  "PullRequests_289009" -> "Repositories_2219" [label="repo_id", fontsize=7];
+  "PullRequests_289009" -> "Users_778" [label="author_id", fontsize=7];
+  "Issues_162993" -> "Repositories_2219" [label="repo_id", fontsize=7];
+  "Issues_162993" -> "Users_778" [label="assignee_id", fontsize=7];
+}

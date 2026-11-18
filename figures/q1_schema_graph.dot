@@ -1,0 +1,31 @@
+digraph schema {
+  rankdir=LR; node [shape=plaintext];
+  Users [label=<<table border="1" cellborder="0"><tr><td bgcolor="#4C78A8"><b>Users</b></td></tr><tr><td align="left">PK user_id</td></tr></table>>];
+  Repositories [label=<<table border="1" cellborder="0"><tr><td bgcolor="#F58518"><b>Repositories</b></td></tr><tr><td align="left">PK repo_id</td></tr></table>>];
+  PullRequests [label=<<table border="1" cellborder="0"><tr><td bgcolor="#54A24B"><b>PullRequests</b></td></tr><tr><td align="left">PK pr_id</td></tr><tr><td align="left">FK repo_id</td></tr><tr><td align="left">FK author_id</td></tr><tr><td align="left">FK merged_by_id</td></tr></table>>];
+  Issues [label=<<table border="1" cellborder="0"><tr><td bgcolor="#B279A2"><b>Issues</b></td></tr><tr><td align="left">PK issue_id</td></tr><tr><td align="left">FK repo_id</td></tr><tr><td align="left">FK author_id</td></tr><tr><td align="left">FK pull_request_id</td></tr><tr><td align="left">FK assignee_id</td></tr></table>>];
+  IssueComments [label=<<table border="1" cellborder="0"><tr><td bgcolor="#E45756"><b>IssueComments</b></td></tr><tr><td align="left">PK comment_id</td></tr><tr><td align="left">FK issue_id</td></tr><tr><td align="left">FK repo_id</td></tr><tr><td align="left">FK author_id</td></tr></table>>];
+  PRReviews [label=<<table border="1" cellborder="0"><tr><td bgcolor="#72B7B2"><b>PRReviews</b></td></tr><tr><td align="left">PK review_id</td></tr><tr><td align="left">FK pr_id</td></tr><tr><td align="left">FK repo_id</td></tr><tr><td align="left">FK reviewer_id</td></tr></table>>];
+  PRReviewComments [label=<<table border="1" cellborder="0"><tr><td bgcolor="#9D755D"><b>PRReviewComments</b></td></tr><tr><td align="left">PK comment_id</td></tr><tr><td align="left">FK pr_id</td></tr><tr><td align="left">FK repo_id</td></tr><tr><td align="left">FK author_id</td></tr><tr><td align="left">FK pull_request_review_id</td></tr><tr><td align="left">FK in_reply_to_id</td></tr></table>>];
+  Pushes [label=<<table border="1" cellborder="0"><tr><td bgcolor="#EECA3B"><b>Pushes</b></td></tr><tr><td align="left">PK push_id</td></tr><tr><td align="left">FK user_id</td></tr><tr><td align="left">FK repo_id</td></tr></table>>];
+  PullRequests -> Repositories [label="repo_id"];
+  PullRequests -> Users [label="author_id"];
+  PullRequests -> Users [label="merged_by_id"];
+  Issues -> Repositories [label="repo_id"];
+  Issues -> Users [label="author_id"];
+  Issues -> PullRequests [label="pull_request_id"];
+  Issues -> Users [label="assignee_id"];
+  IssueComments -> Issues [label="issue_id"];
+  IssueComments -> Repositories [label="repo_id"];
+  IssueComments -> Users [label="author_id"];
+  PRReviews -> PullRequests [label="pr_id"];
+  PRReviews -> Repositories [label="repo_id"];
+  PRReviews -> Users [label="reviewer_id"];
+  PRReviewComments -> PullRequests [label="pr_id"];
+  PRReviewComments -> Repositories [label="repo_id"];
+  PRReviewComments -> Users [label="author_id"];
+  PRReviewComments -> PRReviews [label="pull_request_review_id"];
+  PRReviewComments -> PRReviewComments [label="in_reply_to_id"];
+  Pushes -> Users [label="user_id"];
+  Pushes -> Repositories [label="repo_id"];
+}

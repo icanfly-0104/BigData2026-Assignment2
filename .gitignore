@@ -1,0 +1,7 @@
+.venv/
+raw_filtered/
+data/
+work/
+assignment2/
+__pycache__/
+*.log
