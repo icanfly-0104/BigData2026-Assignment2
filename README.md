@@ -37,7 +37,6 @@ src/
   draw_graphs.py        Q1 schema graph, Q1 relational entity graph, Q4 framework figure
   plots.py              analysis figures (regime shift, model comparison, feature importance)
 figures/                all figures used in the slides
-presentation/           slide content (English) and video script draft
 run_all.sh              runs everything end to end
 ```
 
